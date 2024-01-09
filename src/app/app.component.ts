@@ -1,14 +1,24 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { NavComponent } from './nav/nav.component';
 import { RouterOutlet } from '@angular/router';
+import { NgbCollapseModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
+  imports: [FormsModule, HeaderComponent, NavComponent, RouterOutlet, NgbModalModule, NgbCollapseModule],
+  templateUrl: 'app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'first-project-angular';
+
+  name = '';
 }
+
+// NgModel
+// ngStyle
+// ngClows
+// ngFor
+// ngIF
